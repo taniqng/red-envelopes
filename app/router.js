@@ -7,6 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('redenvelopes', function() {
+    this.route('create');
+  });
+  this.route('questions', function() {
+    this.route('create');
+  });
+  this.route('passwords', function() {
+    this.route('create');
+  });
 });
 
 export default Router;
