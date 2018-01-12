@@ -1,0 +1,89 @@
+@white: #FFFFF0;
+@red:#ff6666;
+@red2:#ff6666;
+@gray:#F5F5F5;
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic-panel {
+  margin-top: 40px;
+  padding-top: 40px;
+  border: 0px solid @red;
+  margin-right: 5px;
+  margin-left: 5px;
+  box-shadow: 2px 2px 1px #888888;
+  background-color: @gray;
+}
+
+.mid-img {
+  width:80px;
+  height:80px;
+}
+
+.float_center {
+  float: right;
+  position: relative;
+  left: -50%; /* or right 50% */
+  // text-align: left;
+}
+.float_center > img {
+  position: relative;
+  left: 50%;
+}
+
+.none-border-padding {
+  border: none;
+  padding: 0;
+}
+
+.red-backgroud {
+  background-color:@red;
+}
+
+.pager li > a,
+.pager li > span {
+  .red-backgroud();
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 2px 2px 1px #888888;
+  &:focus{
+    .red-backgroud();
+  }
+  &:active{
+    .red-backgroud();
+    box-shadow: none;
+  }
+  &:hover{
+    .red-backgroud();
+  }
+  color:@white;
+}
+
+.concise-btn {
+  .none-border-padding();
+  color:gray;
+  &:active{
+    box-shadow: none;
+    color:red;
+  }
+  &.active{
+    box-shadow: none;
+    color:red;
+  }
+}
+
+.underline-btn {
+  .concise-btn();
+  &:active{
+    border-bottom:2px solid red;
+  }
+  &.active{
+    border-bottom:2px solid red;
+  }
+}
