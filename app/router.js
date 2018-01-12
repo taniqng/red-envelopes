@@ -16,6 +16,8 @@ Router.map(function() {
   this.route('passwords', function() {
     this.route('create');
   });
+  this.route('profiles', function() {});
+  this.route('shows');
 });
 
 export default Router;
