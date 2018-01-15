@@ -18,6 +18,7 @@ Router.map(function() {
   });
   this.route('profiles', function() {});
   this.route('shows');
+  this.route('menu');
 });
 
 export default Router;

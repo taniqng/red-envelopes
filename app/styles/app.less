@@ -1,41 +1,44 @@
-@white: #FFFFF0;
-@red:#ff6666;
-@red2:#ff6666;
+@white: white;
+@red:#CD5B45;
 @gray:#F5F5F5;
-@gray2: #EBD6D6;
+@bgcolor: #F0F0F0;
+@shadowcolor:	#D3D3D3;
 
+body{
+  background-color: @bgcolor;
+}
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 .pic-panel {
   margin-top: 40px;
   padding-top: 40px;
   border: 0px solid @red;
   margin-right: 5px;
   margin-left: 5px;
-  box-shadow: 2px 2px 1px #888888;
-  background-color: @gray;
+  box-shadow: 2px 2px 1px @shadowcolor;
+  //box-shadow: none;
+  background-color: @white;
 }
-
 .mid-img {
   width:80px;
   height:80px;
 }
-
+.min-img {
+  width:40px;
+  height:40px;
+}
 .float_center {
   float: right;
   position: relative;
   left: -50%; /* or right 50% */
-  // text-align: left;
 }
 .float_center > img {
   position: relative;
   left: 50%;
 }
-
 .none-border-padding {
   border: none;
   padding: 0;
@@ -45,6 +48,14 @@
   background-color:@red;
 }
 
+.media {
+  background-color: @white;
+}
+.media-body {
+  padding-top: 10px;
+  background-color: @white;
+}
+
 .pager li > a,
 .pager li > span {
   .red-backgroud();
@@ -52,7 +63,7 @@
   padding: 5px 14px;
   border: 1px solid #ddd;
   border-radius: 15px;
-  box-shadow: 2px 2px 1px #888888;
+  box-shadow: 2px 2px 1px @shadowcolor;
   &:focus{
     .red-backgroud();
   }
@@ -62,7 +73,6 @@
   }
   &:hover{
     .red-backgroud();
-    color:@gray2;
     cursor:pointer;
   }
   color:@white;
@@ -73,20 +83,20 @@
   color:gray;
   &:active{
     box-shadow: none;
-    color:red;
+    color:@red;
   }
   &.active{
     box-shadow: none;
-    color:red;
+    color:@red;
   }
 }
 
 .underline-btn {
   .concise-btn();
   &:active{
-    border-bottom:2px solid red;
+    border-bottom:2px solid @red;
   }
   &.active{
-    border-bottom:2px solid red;
+    border-bottom:2px solid @red;
   }
 }
