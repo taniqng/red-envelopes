@@ -1,8 +1,107 @@
 @white: white;
 @red:#CD5B45;
+@darkred: #8B3E2F;
 @gray:#F5F5F5;
 @bgcolor: #F0F0F0;
 @shadowcolor:	#D3D3D3;
+@gray2:#999;
+@linesize:33px;
+
+h4{
+  font-size:15px;
+  letter-spacing: 0.6px;
+}
+
+.text-desc{
+  padding-left: 66px;
+  color:@gray2;
+}
+
+.gray-text {
+  color:@gray2;
+}
+
+.line-txt-group > *{
+  border: 0px solid @red;
+  border-bottom: 2px solid @red;
+  background-color: @white;
+  box-shadow: none;
+  border-radius:0px;
+
+  &:focus{
+    border: 0px solid @red;
+    border-bottom: 2px solid @red;
+    background-color: @white;
+    box-shadow: none;
+  }
+  &:active{
+    border: 0px solid @red;
+    border-bottom: 2px solid @red;
+    background-color: @white;
+    box-shadow: none;
+  }
+  &:hover{
+    border: 0px solid @red;
+    border-bottom: 2px solid @red;
+    background-color: @white;
+    box-shadow: none;
+  }
+}
+
+.line-txt-group > span {
+  text-align: center;
+  vertical-align:bottom;
+  padding-right: 0px;
+  border-bottom: 0px solid @red;
+}
+
+.btn-red {
+  background-image: none;
+  background-repeat: none;
+  .red-backgroud();
+  border-color: @red;
+  box-shadow: 4px 4px 2px @shadowcolor;
+  border-radius:20px;
+  font-size:16px;
+  letter-spacing: 2px;
+  &:focus{
+    background-image: none;
+    background-repeat: none;
+    border-color: @red;
+    .red-backgroud();
+  }
+  &:active{
+    background-image: none;
+    background-repeat: none;
+    border-color: @red;
+    box-shadow: 2px 2px 1px @shadowcolor;
+    .red-backgroud();
+  }
+  &:hover{
+    background-image: none;
+    background-repeat: none;
+    border-color: @red;
+    .red-backgroud();
+  }
+}
+
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus {
+  color: #fff;
+  background-color: @darkred;
+  border-color: @red;
+}
+
+textarea {
+  resize: none;
+}
 
 body{
   background-color: @bgcolor;
@@ -22,7 +121,10 @@ body{
 }
 
 .btn-send {
-  background-color: @red;
+  //background-color: @red;
+  padding-left: 14%;
+  padding-right: 14%;
+  height:40px;
   color: @white;
 }
 
@@ -106,10 +208,20 @@ body{
 
 .underline-btn {
   .concise-btn();
-  &:active{
+  &:active:after{
+    width: @linesize;
+    content:"";
+    .center-block();
     border-bottom:2px solid @red;
+    text-align: center;
+    //padding: 0 0 4px;
   }
-  &.active{
-    border-bottom:2px solid @red;
+  &.active:after{
+      width: @linesize;
+      content:"";
+      .center-block();
+      border-bottom:2px solid @red;
+      text-align: center;
+      //padding: 0 0 4px;
   }
 }
