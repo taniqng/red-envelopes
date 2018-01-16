@@ -5,7 +5,8 @@
 @bgcolor: #F0F0F0;
 @shadowcolor:	#D3D3D3;
 @gray2:#999;
-@linesize:33px;
+@linesize:75px;
+@lightgray:#F0F0F0;
 
 h4{
   font-size:15px;
@@ -21,30 +22,26 @@ h4{
   color:@gray2;
 }
 
-.line-txt-group > *{
+.bottom-style {
   border: 0px solid @red;
-  border-bottom: 2px solid @red;
+  border-bottom: 0.5px solid @lightgray;
   background-color: @white;
   box-shadow: none;
+}
+
+
+.line-txt-group > *{
+  .bottom-style();
   border-radius:0px;
 
   &:focus{
-    border: 0px solid @red;
-    border-bottom: 2px solid @red;
-    background-color: @white;
-    box-shadow: none;
+    .bottom-style();
   }
   &:active{
-    border: 0px solid @red;
-    border-bottom: 2px solid @red;
-    background-color: @white;
-    box-shadow: none;
+    .bottom-style();
   }
   &:hover{
-    border: 0px solid @red;
-    border-bottom: 2px solid @red;
-    background-color: @white;
-    box-shadow: none;
+    .bottom-style();
   }
 }
 
@@ -161,6 +158,11 @@ body{
 
 .red-backgroud {
   background-color:@red;
+  margin-bottom: 12px;
+}
+
+.btn-group{
+  //margin-bottom: 12px;
 }
 
 .media {
