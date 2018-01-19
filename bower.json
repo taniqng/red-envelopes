@@ -1,0 +1,6 @@
+{
+  "name": "red-envelopes",
+  "dependencies": {
+    "photoswipe": "4.1.0"
+  }
+}
