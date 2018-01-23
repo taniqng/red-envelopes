@@ -14,6 +14,10 @@ export default Component.extend({
         this.get("pics").pushObject(file);
     },
 
+    filesLoaded: function(file) {
+        this.get("pics").pushObjects(file);
+    },
+
     viewBigPic: function(idx) {
       console.log(idx);
     },
