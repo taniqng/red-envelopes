@@ -1,0 +1,22 @@
+
+<div class="row pic-box">
+  {{#each pics as |pic idx|}}
+    <div class="col-xs-3 col-md-3" >
+      <a  {{action "removePic" idx on="doubleClick"}}>
+        <a href="{{pic.data}}" data-lightbox="roadtrip" class="min-pic"><img src="{{pic.data}}" alt="..." class="min-pic"></a>
+      </a>
+    </div>
+  {{/each}}
+
+  {{#if canAddPic}}
+    <div class="col-xs-3 col-md-3">
+      {{#file-picker fileLoaded="fileLoaded" preview=false readAs="readAsDataURL"}}
+      <a href="#">
+        +
+      </a>
+      {{/file-picker}}
+    </div>
+  {{/if}}
+</div>
+<p class="text-desc"><h5>双击图片删除，单击查看</h5></p>
+{{yield}}
