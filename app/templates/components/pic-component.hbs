@@ -10,11 +10,11 @@
 
   {{#if canAddPic}}
     <div class="col-xs-3 col-md-3">
-      {{#file-picker fileLoaded="fileLoaded" preview=false readAs="readAsDataURL"}}
+      {{#img-picker fileLoaded="fileLoaded" multiple=true preview=false readAs="readAsDataURL"}}
       <a href="#">
         +
       </a>
-      {{/file-picker}}
+      {{/img-picker}}
     </div>
   {{/if}}
 </div>
